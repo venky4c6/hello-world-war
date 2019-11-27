@@ -1,9 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage("build"){
+        stage("Git Checkout"){
             steps{
-                git 'https://github.com/venky4c6/hello-world-war'
+                
                
                 }
         }

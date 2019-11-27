@@ -12,8 +12,7 @@ pipeline{
         steps {
             sshagent(['ubuntu']) {
                 sh """
-                    sudo -i
-                    cd ..
+                    
                     pwd
                     docker build -t tomcat .
                 """

@@ -1,10 +1,20 @@
 pipeline{
   agent any
   stages{
+  stage("Git Checkout"){
+            steps{
+                
+                git 'https://github.com/venky4c6/hello-world-war'
+               
+                }
+        }
     stage("docker Image") {
         steps {
             sshagent(['ubuntu']) {
                 sh """
+                    sudo -i
+                    cd ..
+                    pwd
                     docker build -t tomcat .
                 """
             }

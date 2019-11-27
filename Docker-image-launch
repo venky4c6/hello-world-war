@@ -1,1 +1,12 @@
 pipeline{
+  agent any
+    stage("docker Image"){
+        steps{
+            sshagent(['ubuntu']) {
+                sh """
+                    docker build -t tomcat .
+                """
+            }
+        }
+    }
+}

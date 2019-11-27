@@ -1,4 +1,4 @@
-currentBuild.displayName = "declarative-pipeline-#"+currentBuild.Number
+
 pipeline{
     agent any
     stages{

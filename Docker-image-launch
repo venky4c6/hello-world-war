@@ -1,7 +1,7 @@
-pipeline{
+pipeline {
   agent any
-    stage("docker Image"){
-        steps{
+    stage("docker Image") {
+        steps {
             sshagent(['ubuntu']) {
                 sh """
                     docker build -t tomcat .

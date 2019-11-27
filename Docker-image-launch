@@ -14,7 +14,7 @@ pipeline{
                 sh "cd .."
                 sh "cd /opt"
                 sh "touch docker"
-                sh "docker build -t tomcat ."
+                
                 }
             
         }

@@ -1,3 +1,4 @@
+currentBuild.displayName = "declarative-pipeline-#"+currentBuild.number
 
 pipeline{
     agent any

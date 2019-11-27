@@ -11,7 +11,7 @@ pipeline{
         stage("Maven Build"){
             steps{
                 sh "mvn clean install package"
-                sh "mv target/*.war target/dad.war"
+                sh "mv target/*.war target/dad-{$env.BUILD_NUMBER}.war"
             }
         }
         stage("Deploy"){

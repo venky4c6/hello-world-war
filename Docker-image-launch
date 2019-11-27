@@ -13,7 +13,8 @@ pipeline{
             sshagent(['ubuntu']) {
                 sh "cd .."
                 sh "cd /opt"
-                sh "touch docker"
+                sh "pwd"
+                sh "touch docker1.txt"
                 
                 }
             

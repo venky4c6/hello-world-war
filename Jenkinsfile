@@ -1,4 +1,4 @@
-currentBuild.displayName = "declarative-pipeline-#"+currentBuild.number
+
 
 pipeline{
     agent any
@@ -35,3 +35,11 @@ pipeline{
         
     }
 }
+
+
+
+
+
+
+
+currentBuild.displayName = "declarative-pipeline-#"+currentBuild.number

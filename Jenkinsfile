@@ -20,8 +20,8 @@ pipeline{
                     
                     sh """
                         scp -o StrictHostKeyChecking=no target/dad.war ubuntu@172.31.39.220:/opt/apache-tomcat-7.0.96/webapps/
-                        ssh ubuntu@172.31.39.220 /opt/apache-tomcat-7.0.96/bin/shutdown.sh
-                        ssh ubuntu@172.31.39.220 /opt/apache-tomcat-7.0.96/bin/startup.sh
+                        ssh root@172.31.39.220 /opt/apache-tomcat-7.0.96/bin/shutdown.sh
+                        ssh root@172.31.39.220 /opt/apache-tomcat-7.0.96/bin/startup.sh
 
                     """
                 

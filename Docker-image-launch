@@ -10,13 +10,9 @@ pipeline{
         }
     stage("docker Image") {
         steps {
-            sshagent(['ubuntu']) {
-                sh """
-                    
-                    pwd
-                    docker build -t tomcat .
-                """
-            }
+            
+                sh "docker build -t tomcat ."
+            
         }
     }
     }

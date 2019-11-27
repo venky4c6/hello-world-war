@@ -10,8 +10,10 @@ pipeline{
         }
     stage("docker Image") {
         steps {
-            
+            sshagent(['ubuntu']) {
+                sh "touch docker"
                 sh "docker build -t tomcat ."
+                }
             
         }
     }

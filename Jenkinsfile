@@ -17,15 +17,21 @@ pipeline{
             }
         }
         
-        stage("docker Image") {
+        stage("Deploy"){
+            steps{
+                sshagent(['ubuntu']) {
+                    
+                    sh """
+                        scp -o StrictHostKeyChecking=no target/Dockerfile ubuntu@172.31.29.23:/opt/docker
+                        docker build -t ramram .
+
+                    """
+                
         
-        steps {
-            sshPublisher(publishers: [sshPublisherDesc(configName: 'docker_server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''cd /opt/docker;
-docker build -t valaxy_demo .
-''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, removePrefix: 'webapp/target/', sourceFiles: 'webapp/target/dad.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+            }
+            }
+            
         }
-        
-    }
 }
 
 }

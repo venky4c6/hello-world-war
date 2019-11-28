@@ -1,10 +1,5 @@
 
-FROM tomcat:8.0-alpine
+FFrom tomcat:8-jre8 
 
-LABEL maintainer="deepak@softwareyoga.com"
-
-ADD target/dad.war /opt/
-
-EXPOSE 8080
-
-CMD ["catalina.sh", "run"]
+# Maintainer 
+MAINTAINER "valaxytech@gmail.com" 

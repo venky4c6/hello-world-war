@@ -28,18 +28,4 @@ docker build -t valaxy_demo .
     }
 }
 
-
-
-
-                        
-      
-
-
-
-
-
-
-
-
-currentBuild.displayName = "declarative-pipeline-#"+currentBuild.number
 }

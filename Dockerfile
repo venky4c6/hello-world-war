@@ -1,5 +1,5 @@
 
-FFrom tomcat:8-jre8 
+From ubuntu:latest 
 
 # Maintainer 
 MAINTAINER "valaxytech@gmail.com" 

@@ -22,7 +22,7 @@ pipeline{
                 sshagent(['ubuntu']) {
                     
                     sh """
-                        scp -o StrictHostKeyChecking=no target/Dockerfile ubuntu@172.31.29.23:/opt/docker
+                        scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/declarative-demo pipeline/Dockerfile ubuntu@172.31.29.23:/opt/docker
                         docker build -t ramram .
 
                     """

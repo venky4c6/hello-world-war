@@ -32,6 +32,15 @@ pipeline{
             }
             
         }
+        stage("docker Image") {
+        steps {
+            sshagent(['ubuntu']) {
+                sh "docker build -t ramram ."
+                
+                }
+            
+        }
+    }
         
     }
 }
